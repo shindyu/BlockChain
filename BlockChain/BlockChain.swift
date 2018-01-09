@@ -37,6 +37,6 @@ class BlockChain {
                 amount: 5
             )
         )
-        return 2//currentTransaction.lastBlock().index + 1
+        return chain.isEmpty ? 1 : lastBlock.index + 1
     }
 }
