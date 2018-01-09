@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		513E0BA72004EC6700B610BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BA62004EC6700B610BF /* AppDelegate.swift */; };
+		513E0BA92004EC6700B610BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BA82004EC6700B610BF /* ViewController.swift */; };
+		513E0BAE2004EC6700B610BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513E0BAD2004EC6700B610BF /* Assets.xcassets */; };
+		513E0BB12004EC6700B610BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513E0BAF2004EC6700B610BF /* LaunchScreen.storyboard */; };
+		513E0BBC2004EC6700B610BF /* BlockChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BBB2004EC6700B610BF /* BlockChainTests.swift */; };
+		513E0BC72004ECB900B610BF /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BC62004ECB900B610BF /* BlockChain.swift */; };
+		513E0BC92004EE5700B610BF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BC82004EE5700B610BF /* Transaction.swift */; };
+		513E0BCB2004EE6100B610BF /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BCA2004EE6100B610BF /* Block.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		513E0BB82004EC6700B610BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 513E0B9B2004EC6700B610BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 513E0BA22004EC6700B610BF;
+			remoteInfo = BlockChain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		513E0BA32004EC6700B610BF /* BlockChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		513E0BA62004EC6700B610BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		513E0BA82004EC6700B610BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		513E0BAD2004EC6700B610BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		513E0BB02004EC6700B610BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		513E0BB22004EC6700B610BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513E0BB72004EC6700B610BF /* BlockChainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockChainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		513E0BBB2004EC6700B610BF /* BlockChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainTests.swift; sourceTree = "<group>"; };
+		513E0BBD2004EC6700B610BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513E0BC62004ECB900B610BF /* BlockChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChain.swift; sourceTree = "<group>"; };
+		513E0BC82004EE5700B610BF /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		513E0BCA2004EE6100B610BF /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		513E0BA02004EC6700B610BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		513E0BB42004EC6700B610BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		513E0B9A2004EC6700B610BF = {
+			isa = PBXGroup;
+			children = (
+				513E0BA52004EC6700B610BF /* BlockChain */,
+				513E0BBA2004EC6700B610BF /* BlockChainTests */,
+				513E0BA42004EC6700B610BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		513E0BA42004EC6700B610BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				513E0BA32004EC6700B610BF /* BlockChain.app */,
+				513E0BB72004EC6700B610BF /* BlockChainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		513E0BA52004EC6700B610BF /* BlockChain */ = {
+			isa = PBXGroup;
+			children = (
+				513E0BA62004EC6700B610BF /* AppDelegate.swift */,
+				513E0BA82004EC6700B610BF /* ViewController.swift */,
+				513E0BAD2004EC6700B610BF /* Assets.xcassets */,
+				513E0BAF2004EC6700B610BF /* LaunchScreen.storyboard */,
+				513E0BB22004EC6700B610BF /* Info.plist */,
+				513E0BC62004ECB900B610BF /* BlockChain.swift */,
+				513E0BC82004EE5700B610BF /* Transaction.swift */,
+				513E0BCA2004EE6100B610BF /* Block.swift */,
+			);
+			path = BlockChain;
+			sourceTree = "<group>";
+		};
+		513E0BBA2004EC6700B610BF /* BlockChainTests */ = {
+			isa = PBXGroup;
+			children = (
+				513E0BBB2004EC6700B610BF /* BlockChainTests.swift */,
+				513E0BBD2004EC6700B610BF /* Info.plist */,
+			);
+			path = BlockChainTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		513E0BA22004EC6700B610BF /* BlockChain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 513E0BC02004EC6700B610BF /* Build configuration list for PBXNativeTarget "BlockChain" */;
+			buildPhases = (
+				513E0B9F2004EC6700B610BF /* Sources */,
+				513E0BA02004EC6700B610BF /* Frameworks */,
+				513E0BA12004EC6700B610BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockChain;
+			productName = BlockChain;
+			productReference = 513E0BA32004EC6700B610BF /* BlockChain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		513E0BB62004EC6700B610BF /* BlockChainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 513E0BC32004EC6700B610BF /* Build configuration list for PBXNativeTarget "BlockChainTests" */;
+			buildPhases = (
+				513E0BB32004EC6700B610BF /* Sources */,
+				513E0BB42004EC6700B610BF /* Frameworks */,
+				513E0BB52004EC6700B610BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				513E0BB92004EC6700B610BF /* PBXTargetDependency */,
+			);
+			name = BlockChainTests;
+			productName = BlockChainTests;
+			productReference = 513E0BB72004EC6700B610BF /* BlockChainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		513E0B9B2004EC6700B610BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = shindyu;
+				TargetAttributes = {
+					513E0BA22004EC6700B610BF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					513E0BB62004EC6700B610BF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 513E0BA22004EC6700B610BF;
+					};
+				};
+			};
+			buildConfigurationList = 513E0B9E2004EC6700B610BF /* Build configuration list for PBXProject "BlockChain" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 513E0B9A2004EC6700B610BF;
+			productRefGroup = 513E0BA42004EC6700B610BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				513E0BA22004EC6700B610BF /* BlockChain */,
+				513E0BB62004EC6700B610BF /* BlockChainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		513E0BA12004EC6700B610BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513E0BB12004EC6700B610BF /* LaunchScreen.storyboard in Resources */,
+				513E0BAE2004EC6700B610BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		513E0BB52004EC6700B610BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		513E0B9F2004EC6700B610BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513E0BA92004EC6700B610BF /* ViewController.swift in Sources */,
+				513E0BA72004EC6700B610BF /* AppDelegate.swift in Sources */,
+				513E0BCB2004EE6100B610BF /* Block.swift in Sources */,
+				513E0BC92004EE5700B610BF /* Transaction.swift in Sources */,
+				513E0BC72004ECB900B610BF /* BlockChain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		513E0BB32004EC6700B610BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513E0BBC2004EC6700B610BF /* BlockChainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		513E0BB92004EC6700B610BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 513E0BA22004EC6700B610BF /* BlockChain */;
+			targetProxy = 513E0BB82004EC6700B610BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		513E0BAF2004EC6700B610BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				513E0BB02004EC6700B610BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		513E0BBE2004EC6700B610BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		513E0BBF2004EC6700B610BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		513E0BC12004EC6700B610BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 653H53HHBU;
+				INFOPLIST_FILE = BlockChain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		513E0BC22004EC6700B610BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 653H53HHBU;
+				INFOPLIST_FILE = BlockChain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		513E0BC42004EC6700B610BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 653H53HHBU;
+				INFOPLIST_FILE = BlockChainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockChain.app/BlockChain";
+			};
+			name = Debug;
+		};
+		513E0BC52004EC6700B610BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 653H53HHBU;
+				INFOPLIST_FILE = BlockChainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlockChain.app/BlockChain";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		513E0B9E2004EC6700B610BF /* Build configuration list for PBXProject "BlockChain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				513E0BBE2004EC6700B610BF /* Debug */,
+				513E0BBF2004EC6700B610BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		513E0BC02004EC6700B610BF /* Build configuration list for PBXNativeTarget "BlockChain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				513E0BC12004EC6700B610BF /* Debug */,
+				513E0BC22004EC6700B610BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		513E0BC32004EC6700B610BF /* Build configuration list for PBXNativeTarget "BlockChainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				513E0BC42004EC6700B610BF /* Debug */,
+				513E0BC52004EC6700B610BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 513E0B9B2004EC6700B610BF /* Project object */;
+}
