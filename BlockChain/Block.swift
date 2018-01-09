@@ -9,5 +9,9 @@
 import Foundation
 
 struct Block {
-    
+    let index: Int
+    let timestamp: Double
+    let transactions: [Transaction]
+    let proof: Int
+    let previousHash: String
 }

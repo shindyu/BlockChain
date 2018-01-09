@@ -9,5 +9,15 @@
 import Foundation
 
 struct Transaction {
-    
+    let sender: String
+    let recipient: String
+    let amount: Int
+}
+
+extension Transaction: Equatable {}
+
+func ==(lhs: Transaction, rhs: Transaction) -> Bool {
+    return lhs.sender == rhs.sender &&
+        lhs.recipient == rhs.recipient &&
+        lhs.amount == rhs.amount
 }

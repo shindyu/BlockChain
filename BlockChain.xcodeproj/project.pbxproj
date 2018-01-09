@@ -15,6 +15,7 @@
 		513E0BC72004ECB900B610BF /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BC62004ECB900B610BF /* BlockChain.swift */; };
 		513E0BC92004EE5700B610BF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BC82004EE5700B610BF /* Transaction.swift */; };
 		513E0BCB2004EE6100B610BF /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BCA2004EE6100B610BF /* Block.swift */; };
+		513E0BCD2004F3CF00B610BF /* BlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BCC2004F3CF00B610BF /* BlockTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		513E0BC62004ECB900B610BF /* BlockChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChain.swift; sourceTree = "<group>"; };
 		513E0BC82004EE5700B610BF /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		513E0BCA2004EE6100B610BF /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		513E0BCC2004F3CF00B610BF /* BlockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				513E0BBB2004EC6700B610BF /* BlockChainTests.swift */,
 				513E0BBD2004EC6700B610BF /* Info.plist */,
+				513E0BCC2004F3CF00B610BF /* BlockTests.swift */,
 			);
 			path = BlockChainTests;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				513E0BBC2004EC6700B610BF /* BlockChainTests.swift in Sources */,
+				513E0BCD2004F3CF00B610BF /* BlockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
