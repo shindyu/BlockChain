@@ -10,10 +10,12 @@ import XCTest
 @testable import BlockChain
 
 class BlockChainTests: XCTestCase {
-    
+    var blockChain: BlockChain!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        blockChain = BlockChain(dateProvider: FakeDateProvider())
     }
     
     override func tearDown() {
@@ -21,24 +23,29 @@ class BlockChainTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_initialize() {
-        let blockChain = BlockChain()
+    func test_initialize_createGenesisBlock() {
+        let genesisBlock = Block(
+            index: 1,
+            timestamp: FakeDateProvider().timestamp(),
+            transactions: [],
+            proof: 100,
+            previousHash: "1"
+        )
 
-        XCTAssertTrue(blockChain.chain.isEmpty)
+        XCTAssertEqual(blockChain.chain.count, 1)
+        XCTAssertEqual(blockChain.chain.last, genesisBlock)
         XCTAssertTrue(blockChain.currentTransaction.isEmpty)
     }
 
     func test_createBlock() {
-        let blockChain = BlockChain()
+        let prevCount = blockChain.chain.count
 
         blockChain.createBlock()
 
-        XCTAssertEqual(blockChain.chain.count, 1)
+        XCTAssertEqual(blockChain.chain.count, prevCount + 1)
     }
 
     func test_createTransaction_appendToCurrentTransaction() {
-        let blockChain = BlockChain()
-
         _ = blockChain.createTransaction(
             sender: "8527147fe1f5426f9dd545de4b27ee00",
             recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
@@ -49,8 +56,6 @@ class BlockChainTests: XCTestCase {
     }
 
     func test_createTransaction_returnNextIndex() {
-        let blockChain = BlockChain()
-
         let transaction = Transaction(
             sender: "8527147fe1f5426f9dd545de4b27ee00",
             recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
@@ -76,8 +81,6 @@ class BlockChainTests: XCTestCase {
     }
 
     func test_lastBlock() {
-        let blockChain = BlockChain()
-
         let transaction = Transaction(
             sender: "8527147fe1f5426f9dd545de4b27ee00",
             recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",

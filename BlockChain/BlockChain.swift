@@ -9,8 +9,27 @@
 import Foundation
 
 class BlockChain {
+    let dateProvider: DateProvider
     var chain: [Block] = []
     var currentTransaction: [Transaction] = []
+
+    init(dateProvider: DateProvider) {
+        self.dateProvider = dateProvider
+
+        chain = []
+        currentTransaction = []
+
+        chain.append(
+            Block(
+                index: 1,
+                timestamp: dateProvider.timestamp(),
+                transactions: [],
+                proof: 100,
+                previousHash: "1"
+            )
+        )
+    }
+
     var lastBlock: Block {
         get {
             return chain.last!
