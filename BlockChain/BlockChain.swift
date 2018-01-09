@@ -19,15 +19,7 @@ class BlockChain {
         chain = []
         currentTransaction = []
 
-        chain.append(
-            Block(
-                index: 1,
-                timestamp: dateProvider.timestamp(),
-                transactions: [],
-                proof: 100,
-                previousHash: "1"
-            )
-        )
+        createBlock(proof: 100, previousHash: "1")
     }
 
     var lastBlock: Block {
@@ -36,14 +28,14 @@ class BlockChain {
         }
     }
 
-    func createBlock() {
+    func createBlock(proof: Int, previousHash: String = hash()) {
         chain.append(
             Block(
                 index: 1,
-                timestamp: 1506057125.900785,
+                timestamp: dateProvider.timestamp(),
                 transactions: [],
-                proof: 324984774000,
-                previousHash: "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+                proof: proof,
+                previousHash: previousHash
             )
         )
     }
@@ -57,5 +49,9 @@ class BlockChain {
             )
         )
         return chain.isEmpty ? 1 : lastBlock.index + 1
+    }
+
+    static func hash() -> String {
+        return "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
     }
 }

@@ -40,7 +40,7 @@ class BlockChainTests: XCTestCase {
     func test_createBlock() {
         let prevCount = blockChain.chain.count
 
-        blockChain.createBlock()
+        blockChain.createBlock(proof: 100, previousHash: "1")
 
         XCTAssertEqual(blockChain.chain.count, prevCount + 1)
     }
