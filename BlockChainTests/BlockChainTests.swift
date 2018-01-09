@@ -27,4 +27,20 @@ class BlockChainTests: XCTestCase {
         XCTAssertTrue(blockChain.chain.isEmpty)
         XCTAssertTrue(blockChain.currentTransaction.isEmpty)
     }
+
+    func test_createBlock() {
+        let blockChain = BlockChain()
+
+        blockChain.createBlock()
+
+        XCTAssertEqual(blockChain.chain.count, 1)
+    }
+
+    func test_createTransaction() {
+        let blockChain = BlockChain()
+
+        blockChain.createTransaction()
+
+        XCTAssertEqual(blockChain.currentTransaction.count, 1)
+    }
 }
