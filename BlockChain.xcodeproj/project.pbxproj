@@ -18,6 +18,8 @@
 		513E0BCD2004F3CF00B610BF /* BlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BCC2004F3CF00B610BF /* BlockTests.swift */; };
 		513E0BCF200501F400B610BF /* FakeDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BCE200501F400B610BF /* FakeDateProvider.swift */; };
 		513E0BD12005021900B610BF /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD02005021900B610BF /* DateProvider.swift */; };
+		513E0BD320050CAA00B610BF /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD220050CAA00B610BF /* SHA256.swift */; };
+		513E0BD920050D8300B610BF /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD820050D8300B610BF /* Common.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		513E0BCC2004F3CF00B610BF /* BlockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTests.swift; sourceTree = "<group>"; };
 		513E0BCE200501F400B610BF /* FakeDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDateProvider.swift; sourceTree = "<group>"; };
 		513E0BD02005021900B610BF /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
+		513E0BD220050CAA00B610BF /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
+		513E0BD620050D8200B610BF /* BlockChain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockChain-Bridging-Header.h"; sourceTree = "<group>"; };
+		513E0BD720050D8300B610BF /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		513E0BD820050D8300B610BF /* Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				513E0BC82004EE5700B610BF /* Transaction.swift */,
 				513E0BCA2004EE6100B610BF /* Block.swift */,
 				513E0BD02005021900B610BF /* DateProvider.swift */,
+				513E0BD220050CAA00B610BF /* SHA256.swift */,
+				513E0BD720050D8300B610BF /* Common.h */,
+				513E0BD820050D8300B610BF /* Common.m */,
+				513E0BD620050D8200B610BF /* BlockChain-Bridging-Header.h */,
 			);
 			path = BlockChain;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 				TargetAttributes = {
 					513E0BA22004EC6700B610BF = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					513E0BB62004EC6700B610BF = {
@@ -214,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				513E0BA92004EC6700B610BF /* ViewController.swift in Sources */,
+				513E0BD320050CAA00B610BF /* SHA256.swift in Sources */,
 				513E0BA72004EC6700B610BF /* AppDelegate.swift in Sources */,
 				513E0BCB2004EE6100B610BF /* Block.swift in Sources */,
+				513E0BD920050D8300B610BF /* Common.m in Sources */,
 				513E0BC92004EE5700B610BF /* Transaction.swift in Sources */,
 				513E0BD12005021900B610BF /* DateProvider.swift in Sources */,
 				513E0BC72004ECB900B610BF /* BlockChain.swift in Sources */,
@@ -365,12 +378,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = BlockChain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlockChain/BlockChain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,12 +396,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = BlockChain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shindyu.BlockChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlockChain/BlockChain-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

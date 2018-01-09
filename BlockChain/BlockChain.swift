@@ -11,13 +11,12 @@ import Foundation
 class BlockChain {
     let dateProvider: DateProvider
     var chain: [Block] = []
-    var currentTransaction: [Transaction] = []
+    var currentTransactions: [Transaction] = []
 
     init(dateProvider: DateProvider) {
         self.dateProvider = dateProvider
-
-        chain = []
-        currentTransaction = []
+        self.chain = []
+        self.currentTransactions = []
 
         createBlock(proof: 100, previousHash: "1")
     }
@@ -28,30 +27,32 @@ class BlockChain {
         }
     }
 
-    func createBlock(proof: Int, previousHash: String = hash()) {
+    func createBlock(proof: Int, previousHash: String?) {
         chain.append(
             Block(
-                index: 1,
+                index: chain.count + 1,
                 timestamp: dateProvider.timestamp(),
-                transactions: [],
+                transactions: currentTransactions,
                 proof: proof,
-                previousHash: previousHash
+                previousHash: previousHash ?? BlockChain.createHash(with: lastBlock)
             )
         )
+
+        currentTransactions = []
     }
 
     func createTransaction(sender: String, recipient: String, amount: Int) -> Int {
-        currentTransaction.append(
+        currentTransactions.append(
             Transaction(
-                sender: "8527147fe1f5426f9dd545de4b27ee00",
-                recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
-                amount: 5
+                sender: sender,
+                recipient: recipient,
+                amount: amount
             )
         )
-        return chain.isEmpty ? 1 : lastBlock.index + 1
+        return lastBlock.index + 1
     }
 
-    static func hash() -> String {
-        return "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+    static func createHash(with block: Block) -> String {
+        return block.previousHash.sha256
     }
 }
