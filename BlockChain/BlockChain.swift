@@ -11,6 +11,11 @@ import Foundation
 class BlockChain {
     var chain: [Block] = []
     var currentTransaction: [Transaction] = []
+    var lastBlock: Block {
+        get {
+            return chain.last!
+        }
+    }
 
     func createBlock() {
         chain.append(

@@ -15,3 +15,13 @@ struct Block {
     let proof: Int
     let previousHash: String
 }
+
+extension Block: Equatable {}
+
+func ==(lhs: Block, rhs: Block) -> Bool {
+    return lhs.index == rhs.index &&
+        lhs.timestamp == rhs.timestamp &&
+        lhs.transactions == rhs.transactions &&
+        lhs.proof == rhs.proof &&
+        lhs.previousHash == rhs.previousHash
+}
