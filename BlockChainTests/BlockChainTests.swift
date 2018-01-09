@@ -36,11 +36,27 @@ class BlockChainTests: XCTestCase {
         XCTAssertEqual(blockChain.chain.count, 1)
     }
 
-    func test_createTransaction() {
+    func test_createTransaction_appendToCurrentTransaction() {
         let blockChain = BlockChain()
 
-        blockChain.createTransaction()
+        _ = blockChain.createTransaction(
+            sender: "8527147fe1f5426f9dd545de4b27ee00",
+            recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
+            amount: 5
+        )
 
         XCTAssertEqual(blockChain.currentTransaction.count, 1)
+    }
+
+    func test_createTransaction_returnNextIndex() {
+        let blockChain = BlockChain()
+
+        let index = blockChain.createTransaction(
+            sender: "8527147fe1f5426f9dd545de4b27ee00",
+            recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
+            amount: 5
+        )
+
+        XCTAssertEqual(index, 2)
     }
 }

@@ -24,7 +24,7 @@ class BlockChain {
         )
     }
 
-    func createTransaction() {
+    func createTransaction(sender: String, recipient: String, amount: Int) -> Int {
         currentTransaction.append(
             Transaction(
                 sender: "8527147fe1f5426f9dd545de4b27ee00",
@@ -32,5 +32,6 @@ class BlockChain {
                 amount: 5
             )
         )
+        return 2//currentTransaction.lastBlock().index + 1
     }
 }
