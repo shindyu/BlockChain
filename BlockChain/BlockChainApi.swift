@@ -2,47 +2,36 @@ import Foundation
 
 // blockchainの動きをviewで表示するためのエンドポイントの仮実装
 class BlockChainApi {
-    func createTransaction() {
+    let blockchain: BlockChain
 
+    init(dateProvider: DateProvider) {
+        blockchain = BlockChain(dateProvider: dateProvider)
+    }
+    
+    func createTransaction(sender: String, recipient: String, amount: Int) -> String {
+        let index = blockchain.createTransaction(sender:sender, recipient:recipient, amount:amount)
+        let jsonObject = ["message": "トランザクションはブロック{\(index)}に追加されました"]
+        let jsonData = try! JSONSerialization.data(withJSONObject: jsonObject, options: [])
+        let jsonStr = String(bytes: jsonData, encoding: .utf8)!
+        return jsonStr
     }
 
-    func mine() {
-
-    }
-
-    func fullChain() {
-
-    }
-}
-class BlockChainService: NSObject {
-
-    // ブロックチェーンクラスのインスタンス
-    let blockchain = BlockChain(dateProvider: DefaultDateProvider())
-
-    // トランザクションのエンドポイント
-    func send(sender: String, recipient: String, amount: Int) -> Int {
-        return blockchain.createTransaction(sender:sender, recipient:recipient, amount:amount)
-    }
-
-    // 採掘のエンドポイント
-    func mine(recipient: String) -> Block {
-        // 次のプルーフを見つけるためプルーフ・オブ・ワークアルゴリズムを使用する
+    func mine() -> String {
         let lastBlock = blockchain.lastBlock
         let lastProof = lastBlock.proof
         let proof = BlockChain.proofOfWork(lastProof: lastProof)
 
-        // プルーフを見つけたことに対する報酬を得る
-        // 送信者は、採掘者が新しいコインを採掘したことを表すために"0"とする
-        blockchain.createTransaction(sender: "0", recipient: recipient, amount: 1)
+        // 採掘報酬
+        blockchain.createTransaction(sender: "0", recipient: "miner", amount: 1)
 
-        // チェーンに新しいブロックを加えることで、新しいブロックを採掘する
-        let block = blockchain.createBlock(proof: proof, previousHash: nil)
+        let newBlock = blockchain.createBlock(proof: proof)
 
-        return block
+        let data = try! JSONEncoder().encode(newBlock)
+        let json = String(data: data, encoding: .utf8)!
+        return json
     }
 
-    // フルのブロックチェーンを返すエンドポイント
-    func chain() -> [Block] {
+    func fullChain() -> [Block] {
         return blockchain.chain
     }
 }

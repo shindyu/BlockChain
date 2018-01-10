@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     let button = UIButton()
     let logView = UITextView()
     let chainView = UITextView()
-    let server = BlockChainService()
     let dateProvider = DefaultDateProvider()
+    let api = BlockChainApi(dateProvider: DefaultDateProvider())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
 
     private func updateChain() {
-        let chain = server.chain()
+        let chain = api.fullChain()
         var text = "chain:\n"
         for block in chain {
             text.append("\(block)\n")
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
 
     func sendBtnTapped(_ sender: UIButton) {
-        let index = server.send(sender: myId, recipient: recipientId, amount: 5)
+        let index = api.createTransaction(sender: myId, recipient: recipientId, amount: 5)
         let text = "Transaction will be added to Block \(index)"
         logView.text = text + "\n" + logView.text
         print(text)
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 
     @objc func mineBtnTapped(_ sender: UIButton) {
         let startTime = dateProvider.timestamp()
-        let block = server.mine(recipient: myId)
+        let block = api.mine()
         let endTime = dateProvider.timestamp()
 
         let text = "New Block Forged *** time: \(endTime - startTime) (s)"

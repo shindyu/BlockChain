@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Block {
+struct Block: Codable {
     let index: Int
     let timestamp: Double
     let transactions: [Transaction]
