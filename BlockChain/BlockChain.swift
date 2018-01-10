@@ -10,8 +10,8 @@ import Foundation
 
 class BlockChain {
     let dateProvider: DateProvider
-    var chain: [Block] = []
-    var currentTransactions: [Transaction] = []
+    var chain: [Block]
+    var currentTransactions: [Transaction]
 
     init(dateProvider: DateProvider) {
         self.dateProvider = dateProvider
@@ -58,5 +58,20 @@ class BlockChain {
 
     static func createHash(with block: Block) -> String {
         return block.previousHash.sha256
+    }
+
+    static func proofOfWork(lastProof: Int) -> Int {
+        var proof = 0
+        while (!validateProof(lastProof: lastProof, proof: proof)) {
+            proof += 1
+        }
+        return proof
+    }
+
+    private static func validateProof(lastProof: Int, proof: Int) -> Bool {
+        if "\(lastProof)\(proof)".sha256.prefix(4) == "0000" {
+            return true
+        }
+        return false
     }
 }

@@ -1,15 +1,6 @@
-
 import Foundation
 
-
-// blockchainの動きをviewで表示するための仮実装
-
-extension BlockChain {
-    static func proofOfWork(lastProof: Int) -> Int {
-        return 10
-    }
-}
-
+// blockchainの動きをviewで表示するためのエンドポイントの仮実装
 class BlockchainServer: NSObject {
 
     // ブロックチェーンクラスのインスタンス

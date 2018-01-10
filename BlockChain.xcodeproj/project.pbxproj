@@ -21,6 +21,7 @@
 		513E0BD320050CAA00B610BF /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD220050CAA00B610BF /* SHA256.swift */; };
 		513E0BD920050D8300B610BF /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD820050D8300B610BF /* Common.m */; };
 		513E0BDB20050F8600B610BF /* BlockChainServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BDA20050F8600B610BF /* BlockChainServer.swift */; };
+		513E0BDD2006749C00B610BF /* BlockChainServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BDC2006749C00B610BF /* BlockChainServerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		513E0BD720050D8300B610BF /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		513E0BD820050D8300B610BF /* Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		513E0BDA20050F8600B610BF /* BlockChainServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainServer.swift; sourceTree = "<group>"; };
+		513E0BDC2006749C00B610BF /* BlockChainServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainServerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				513E0BBD2004EC6700B610BF /* Info.plist */,
 				513E0BCC2004F3CF00B610BF /* BlockTests.swift */,
 				513E0BCE200501F400B610BF /* FakeDateProvider.swift */,
+				513E0BDC2006749C00B610BF /* BlockChainServerTests.swift */,
 			);
 			path = BlockChainTests;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				513E0BBC2004EC6700B610BF /* BlockChainTests.swift in Sources */,
 				513E0BCF200501F400B610BF /* FakeDateProvider.swift in Sources */,
+				513E0BDD2006749C00B610BF /* BlockChainServerTests.swift in Sources */,
 				513E0BCD2004F3CF00B610BF /* BlockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

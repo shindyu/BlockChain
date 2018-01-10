@@ -124,4 +124,20 @@ class BlockChainTests: XCTestCase {
 
         XCTAssertEqual(hash, "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824".sha256)
     }
+
+    func test_proofOfWork_index1to2() {
+        let lastProof = 100 // first proof
+
+        let proof = BlockChain.proofOfWork(lastProof: lastProof)
+
+        XCTAssertEqual(proof, 35293)
+    }
+
+    func test_proofOfWork_index2to3() {
+        let lastProof = 35293
+
+        let proof = BlockChain.proofOfWork(lastProof: lastProof)
+
+        XCTAssertEqual(proof, 35089)
+    }
 }
