@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     let button = UIButton()
     let logView = UITextView()
     let chainView = UITextView()
-    let server = BlockchainServer()
+    let server = BlockChainService()
+    let dateProvider = DefaultDateProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,6 @@ class ViewController: UIViewController {
         chainView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         chainView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         chainView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        chainView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
     }
 
     private func updateChain() {
@@ -67,8 +67,11 @@ class ViewController: UIViewController {
     }
 
     @objc func mineBtnTapped(_ sender: UIButton) {
+        let startTime = dateProvider.timestamp()
         let block = server.mine(recipient: myId)
-        let text = "New Block Forged"
+        let endTime = dateProvider.timestamp()
+
+        let text = "New Block Forged *** time: \(endTime - startTime) (s)"
         logView.text = text + "\n" + logView.text
         print(text+String(describing: type(of: block.self)))
         updateChain()

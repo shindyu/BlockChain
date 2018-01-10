@@ -1,7 +1,20 @@
 import Foundation
 
 // blockchainの動きをviewで表示するためのエンドポイントの仮実装
-class BlockchainServer: NSObject {
+class BlockChainApi {
+    func createTransaction() {
+
+    }
+
+    func mine() {
+
+    }
+
+    func fullChain() {
+
+    }
+}
+class BlockChainService: NSObject {
 
     // ブロックチェーンクラスのインスタンス
     let blockchain = BlockChain(dateProvider: DefaultDateProvider())
