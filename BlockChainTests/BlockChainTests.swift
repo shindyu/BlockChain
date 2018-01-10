@@ -38,7 +38,7 @@ class BlockChainTests: XCTestCase {
     }
 
     func test_createBlock() {
-        _ = blockChain.createTransaction(sender: "test", recipient: "test", amount: 1)
+        blockChain.createTransaction(sender: "test", recipient: "test", amount: 1)
 
         let prevBlockCount = blockChain.chain.count
         let prevTransaction = blockChain.currentTransactions
@@ -53,7 +53,7 @@ class BlockChainTests: XCTestCase {
     }
 
     func test_createTransaction_appendToCurrentTransaction() {
-        _ = blockChain.createTransaction(
+        blockChain.createTransaction(
             sender: "8527147fe1f5426f9dd545de4b27ee00",
             recipient: "a77f5cdfa2934df3954a5c7c7da5df1f",
             amount: 5

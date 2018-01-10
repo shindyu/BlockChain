@@ -20,6 +20,7 @@
 		513E0BD12005021900B610BF /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD02005021900B610BF /* DateProvider.swift */; };
 		513E0BD320050CAA00B610BF /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD220050CAA00B610BF /* SHA256.swift */; };
 		513E0BD920050D8300B610BF /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BD820050D8300B610BF /* Common.m */; };
+		513E0BDB20050F8600B610BF /* BlockChainServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E0BDA20050F8600B610BF /* BlockChainServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		513E0BD620050D8200B610BF /* BlockChain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockChain-Bridging-Header.h"; sourceTree = "<group>"; };
 		513E0BD720050D8300B610BF /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		513E0BD820050D8300B610BF /* Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		513E0BDA20050F8600B610BF /* BlockChainServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				513E0BD720050D8300B610BF /* Common.h */,
 				513E0BD820050D8300B610BF /* Common.m */,
 				513E0BD620050D8200B610BF /* BlockChain-Bridging-Header.h */,
+				513E0BDA20050F8600B610BF /* BlockChainServer.swift */,
 			);
 			path = BlockChain;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				513E0BA92004EC6700B610BF /* ViewController.swift in Sources */,
 				513E0BD320050CAA00B610BF /* SHA256.swift in Sources */,
 				513E0BA72004EC6700B610BF /* AppDelegate.swift in Sources */,
+				513E0BDB20050F8600B610BF /* BlockChainServer.swift in Sources */,
 				513E0BCB2004EE6100B610BF /* Block.swift in Sources */,
 				513E0BD920050D8300B610BF /* Common.m in Sources */,
 				513E0BC92004EE5700B610BF /* Transaction.swift in Sources */,

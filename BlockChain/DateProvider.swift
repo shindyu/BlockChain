@@ -11,3 +11,9 @@ import Foundation
 protocol DateProvider {
     func timestamp() -> Double
 }
+
+struct DefaultDateProvider: DateProvider {
+    func timestamp() -> Double {
+        return Date().timeIntervalSince1970
+    }
+}

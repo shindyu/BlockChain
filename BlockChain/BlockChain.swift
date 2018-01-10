@@ -27,20 +27,24 @@ class BlockChain {
         }
     }
 
-    func createBlock(proof: Int, previousHash: String?) {
-        chain.append(
-            Block(
-                index: chain.count + 1,
-                timestamp: dateProvider.timestamp(),
-                transactions: currentTransactions,
-                proof: proof,
-                previousHash: previousHash ?? BlockChain.createHash(with: lastBlock)
-            )
+    @discardableResult
+    func createBlock(proof: Int, previousHash: String? = nil) -> Block {
+        let block = Block(
+            index: chain.count + 1,
+            timestamp: dateProvider.timestamp(),
+            transactions: currentTransactions,
+            proof: proof,
+            previousHash: previousHash ?? BlockChain.createHash(with: lastBlock)
         )
 
+        chain.append(block)
+
         currentTransactions = []
+
+        return block
     }
 
+    @discardableResult
     func createTransaction(sender: String, recipient: String, amount: Int) -> Int {
         currentTransactions.append(
             Transaction(
